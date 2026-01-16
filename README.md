@@ -1,12 +1,23 @@
-# React + Vite
+Workflow Policy
+It is owned and maintained by the organization.
+For a stable continuity, each of these must go through the following workflow:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Branching:
+Do not push directly to main
+For each task or feature, create a new branch.
+Push only changes back to your own branch
+Open a pull request targeting main
 
-Currently, two official plugins are available:
+MERGING:
+Pull requests are evaluated and integrated by the repository’s admin.
+Pull request authors should not accept the addition of their own requests  
+Contributors can
+Merges can be done by utilizing the organization account.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Notes:
+This process is in place for:
+Protect the live site from accidental modifications
+Ensure that there is a clearly defined review and approval process
+Ensure smooth handover between teams in the future If you're not sure about the workflow, it is always a good idea to ask before making changes.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Good Luck Data Master

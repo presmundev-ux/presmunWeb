@@ -1,0 +1,122 @@
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.banner-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.banner-content p {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.banner-content button {
+  margin-top: 25px;
+  padding: 12px 32px;
+  background: #c98e3b; 
+  border: none;
+  color: #111; 
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.banner-content button:hover {
+  opacity: 0.8;
+}
+
+.banner.hero .banner-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(160, 60, 10, 0.6) 65%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.banner.hero .banner-content h1 {
+  color: #c98e3b; 
+}
+
+.banner.hero .subtitle {
+  color: #c98e3b; 
+}
+
+.banner.light .banner-overlay {
+  background: rgba(255, 255, 255, 0.85); 
+}
+
+.banner.light .banner-content h1 {
+  color: #c98e3b; 
+}
+
+.banner.gradient {
+  background: linear-gradient(
+    to bottom,
+    #171211 0%,     
+    #a84516 65%,    
+    #ffffff 100%    
+  );
+}
+
+.banner.gradient .banner-overlay {
+  display: none; 
+}
+
+.banner.gradient .banner-content h1 {
+  color: #c98e3b; 
+  font-size: 64px; 
+}
+
+.banner.gradient .subtitle {
+  color: #ffffff; 
+  font-size: 18px;
+}
+
+
+.message {
+  padding: 40px 20px 80px;
+  text-align: center;
+  background: white;
+}
+
+.message h2 {
+  color: #c98e3b;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.message p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #c98e3b; 
+  font-size: 18px;
+  line-height: 1.6;
+}

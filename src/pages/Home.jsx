@@ -8,40 +8,43 @@ export default function Home() {
     <>
       <Header />
 
-      {/*Hero/Main banner*/}
+      
       <BannerSection
         title="PRESIDENT INTERNATIONAL MODEL UNITED NATIONS"
-        subtitle="Advancing Diplomacy For a Sustainable Future"
-        buttonText="Register Now"
-        backgroundImage="/images/Mainheroimg.JPG"
+        subtitle="The Thirteenth Session"
+        date="July 11–12, 2026"
+        buttonText="REGISTER"
+        buttonLink={"https://docs.google.com/forms/d/e/1FAIpQLSdV__jiAyYNKmWk45ps7Uh22V4qe65r2GnUrf9M1ZjEh1vMWw/viewform"}
+        backgroundImage="/images/lmao.png"
         height="100vh"
       />
 
-      {/*Message*/}
-      <section className="message">
-        <h2>Message from the Secretary-General</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-        </p>
-      </section>
-
-      {/*About*/}
+      
       <BannerSection
-        title="About Us"
-        buttonText="Learn More"
-        backgroundImage="/images/AboutUsPlaceholder.jpg"
-        variant="light"
-        height="400px"
+        title="The Committees"
+        buttonText="LEARN MORE"
+        buttonLink="/committees"
+        variant="solid-light"
+        height="820px"
+        style={{ backgroundColor: '#ecf0f4'}}
+      />  
+
+      
+<BannerSection
+        title="About us"
+        buttonText="LEARN MORE"
+        buttonLink="/about-pumun" 
+        backgroundImage="/images/PUpict.jpeg"
+        variant="light" 
+        height="820px"
+        style={{ backgroundColor: '#ecf0f4' }}
       />
 
-      {/*Councils*/}
-      <BannerSection
-        title="The Councils"
-        buttonText="Learn More"
-        backgroundImage="/images/TheCouncilsPlaceholder.JPG"
-        variant="light"
-        height="400px"
-      />
+      
+
+
+
+
 
       <Footer />
     </>

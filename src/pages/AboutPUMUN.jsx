@@ -46,6 +46,7 @@ export default function AboutPUMUN() {
       </section>
 
 
+      <hr className="divider" />
      
 
      
@@ -63,6 +64,7 @@ export default function AboutPUMUN() {
         </div>
       </section>
 
+      <hr className="divider" />
       
       <section className="history-section">
         <h2 className="section-title">PUMUN today</h2>

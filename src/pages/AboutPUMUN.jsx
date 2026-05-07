@@ -63,9 +63,10 @@ export default function AboutPUMUN() {
           <p>Since then, PUMUN has continued to grow as a center for aspiring diplomats in the university, promoting critical thinking, public speaking, and a more complex understanding of international relations among its members. The organization has been shaped and guided by distinguished founders and advisors, including H.E. Drs. Sulaiman Abdulmanan, MA; H.E. Drs. Makmur Widodo, MA; and Prof. Anak Banyu Agung Perwita, Ph.D., whose expertise in diplomacy have left an undoubted legacy.</p>
         </div>
       </section>
+    
+            <hr className="divider" />
 
-      <hr className="divider" />
-      
+
       <section className="history-section">
         <h2 className="section-title">PUMUN today</h2>
         

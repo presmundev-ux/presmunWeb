@@ -21,6 +21,14 @@
   flex-shrink: 0;
 }
 
+.divider {
+  border: none;
+  border-top: 1px solid #333;
+  opacity: 2;
+  margin: 0 40px;
+}
+
+
 .about-text {
   flex: 1;
 }

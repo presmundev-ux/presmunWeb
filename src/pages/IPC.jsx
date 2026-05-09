@@ -1,4 +1,3 @@
-// Use ./ since they are in the same 'pages' folder!
 import CouncilTemplate from "./CouncilTemplate.jsx"; 
 
 export default function UNGA() {

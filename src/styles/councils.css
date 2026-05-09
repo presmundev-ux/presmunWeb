@@ -1,10 +1,9 @@
-/* --- PAGE BACKGROUND (WHITE THEME) --- */
 .councils-wrapper {
-  background-color: #ffffff; /* As requested! */
+  background-color: #ffffff; 
   padding: 60px 20px 120px;
 }
 
-/* --- THE GRID --- */
+
 .councils-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -13,75 +12,74 @@
   gap: 40px;
 }
 
-/* --- THE CARDS --- */
+
 .council-card {
   display: flex;
   flex-direction: column;
   height: 420px;
   background-color: #ffffff;
-  border: 1px solid #ffffff; /* White border as requested */
-  border-top: 4px solid #ae2c2d; /* Keeping the sharp Red top border */
+  border: 1px solid #ffffff; 
+  border-top: 4px solid #ae2c2d; 
   text-decoration: none;
-  position: relative; /* Required so it pops 'above' other cards on hover */
+  position: relative; 
   
-  /* Smoothly animates all size/shadow changes */
+  
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
               opacity 0.4s ease, 
               box-shadow 0.4s ease;
 }
 
-/* --- THE "STAND OUT" HOVER EFFECT --- */
-/* 1. When hovering anywhere in the grid, shrink and fade ALL cards slightly */
+
 .councils-container:hover .council-card {
   transform: scale(0.95);
   opacity: 0.6;
 }
 
-/* 2. BUT make the SPECIFIC card your mouse is on enlarge and pop out! */
+
 .councils-container .council-card:hover {
-  transform: scale(1.05); /* Enlarges it */
-  opacity: 1; /* Restores full brightness */
-  z-index: 10; /* Forces it to the front */
-  border: 1px solid #eaeaea; /* Adds a faint border on hover so it doesn't bleed into the white bg */
+  transform: scale(1.05); 
+  opacity: 1; 
+  z-index: 10; 
+  border: 1px solid #eaeaea; 
   border-top: 4px solid #ae2c2d;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Adds a soft drop shadow beneath it */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
 }
 
-/* --- FIXING THE TILING IMAGES --- */
+
 .council-img {
   width: 100%;
   height: 220px; 
   margin-top: 30px;
   background-size: contain; 
   background-position: center;
-  background-repeat: no-repeat; /* CRITICAL FIX: Stops the chaotic repeating! */
+  background-repeat: no-repeat; 
   transition: transform 0.4s ease;
 }
 
-/* Gives the inner image a tiny extra bump when hovered */
+
 .council-card:hover .council-img {
   transform: scale(1.05);
 }
 
-/* --- TYPOGRAPHY (Updated for White Background) --- */
+
 .council-info {
   padding: 20px 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; 
   flex: 1;
-  text-align: center; /* Centering looks very official on white cards */
+  text-align: center; 
 }
 
 .council-info h2 {
-  color: #111111; /* Changed to dark black so it's readable on white */
+  color: #111111; 
   font-size: 32px;
   font-weight: 700;
   margin: 0 0 5px 0;
 }
 
 .council-brief {
-  color: #666666; /* Clean, readable grey */
+  color: #666666; 
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -96,12 +94,12 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 opacity: 0; 
-  transform: translateY(15px); /* Pushes it down slightly */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth entrance */
+  transform: translateY(15px); 
+  transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 
-/* --- Show it on hover --- */
+
 .council-card:hover .read-more {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Slides up into place */
+  opacity: 1; 
+  transform: translateY(0); 
 }

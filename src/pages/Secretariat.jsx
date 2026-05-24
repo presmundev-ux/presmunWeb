@@ -26,7 +26,7 @@ export default function Secretariat() {
     <>
 Olivia is an undergraduate student of International Relations at President University and currently serves as the Under-Secretary-General for Conference Affairs of PUMUN. In this capacity, she assumes the role of the Secretary-General of PresMUN 2026.
       <br /><br />
-With prior experience as part of the PUMUN delegation, Thenu brings both practical and organizational insights to the conference. She is dedicated to ensuring a well-structured and impactful experience for all participants.    
+With prior experience as part of the PUMUN delegation, Olivia brings both practical and organizational insights to the conference. She is dedicated to ensuring a well-structured and impactful experience for all participants.    
     <br></br>
     <br></br>
     If you would like to discuss anything further, feel free to contact her at  <a href="mailto:olivia.thenu@student.president.ac.id.

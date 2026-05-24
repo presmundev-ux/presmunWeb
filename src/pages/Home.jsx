@@ -14,7 +14,7 @@ export default function Home() {
         subtitle="The Thirteenth Session"
         date="July 11–12, 2026"
         buttonText="REGISTER"
-        buttonLink={"https://docs.google.com/forms/d/e/1FAIpQLSdV__jiAyYNKmWk45ps7Uh22V4qe65r2GnUrf9M1ZjEh1vMWw/viewform"}
+        buttonLink={"https://forms.gle/rAPHW3nB4Pf4WYZw9"}
         backgroundImage="/images/lmao.png"
         height="100vh"
       />

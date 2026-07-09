@@ -1,45 +1,121 @@
 import "../styles/footer.css";
 
 export default function Footer() {
+  const sponsors = [
+    { src: "/images/sponsor1.png", height: 100 },
+    { src: "/images/sponsor2.png", height: 40 },
+    { src: "/images/sponsor3.jpeg", height: 120 },
+    { src: "/images/sponsor4.png", height: 40 },
+    { src: "/images/sponsor5.jpeg", height: 40 },
+  ];
+
+  const partners = [
+    { src: "/images/partner1.jpeg", height: 90 },
+    { src: "/images/partner2.png", height: 40 },
+    { src: "/images/partner3.png", height: 70 },
+    { src: "/images/partner4.jpeg", height: 80 },
+    { src: "/images/partner5.png", height: 110 },
+    { src: "/images/partner6.png", height: 90 },
+    { src: "/images/partner7.png", height: 90 },
+    { src: "/images/partner8.PNG", height: 90 },
+    { src: "/images/partner9.png", height: 110 },
+    { src: "/images/partner10.png", height: 110 },
+    { src: "/images/partner11.jpg", height: 110 },
+    { src: "/images/partner12.png", height: 100 },
+    { src: "/images/partner13.png", height: 90 },
+    { src: "/images/partner14.png", height: 90 },
+    { src: "/images/partner15.png", height: 90 },
+    { src: "/images/partner16.jpg", height: 70 },
+    { src: "/images/partner17.jpg", height: 90 },
+    { src: "/images/partner18.jpeg", height: 90 },
+    { src: "/images/partner19.jpg", height: 90 },
+    { src: "/images/partner20.jpg", height: 90 },
+    { src: "/images/partner21.png", height: 90 },
+    { src: "/images/partner22.png", height: 70 },
+    { src: "/images/partner23.png", height: 120 },
+    { src: "/images/partner24.jpg", height: 90 },
+    { src: "/images/partner25.png", height: 90 },
+    { src: "/images/partner26.jpg", height: 90 },
+  ];
+
   return (
     <footer className="footer">
       <div className="footer-content">
-        
+
+
+        {/* Sponsors */}
+        <div className="logo-group">
+          <p className="logo-group-label">Sponsors</p>
+          <div className="logo-marquee">
+            <div className="logo-track">
+              {sponsors.map((logo, i) => (
+                <img
+                  key={`s-a-${i}`}
+                  src={logo.src}
+                  alt={`Sponsor logo ${i + 1}`}
+                  className="marquee-logo"
+                  style={{ height: `${logo.height}px` }}
+                />
+              ))}
+              {sponsors.map((logo, i) => (
+                <img
+                  key={`s-b-${i}`}
+                  src={logo.src}
+                  alt={`Sponsor logo ${i + 1}`}
+                  className="marquee-logo"
+                  style={{ height: `${logo.height}px` }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Partners */}
+        <div className="logo-group">
+          <p className="logo-group-label">Partners</p>
+          <div className="logo-marquee">
+            <div className="logo-track logo-track-reverse">
+              {partners.map((logo, i) => (
+                <img
+                  key={`p-a-${i}`}
+                  src={logo.src}
+                  alt={`Partner logo ${i + 1}`}
+                  className="marquee-logo"
+                  style={{ height: `${logo.height}px` }}
+                />
+              ))}
+              {partners.map((logo, i) => (
+                <img
+                  key={`p-b-${i}`}
+                  src={logo.src}
+                  alt={`Partner logo ${i + 1}`}
+                  className="marquee-logo"
+                  style={{ height: `${logo.height}px` }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="footer-logo">
           <span className="logo-title">PresMUN</span>
-          
         </div>
- 
 
         <div className="social-links">
-          
-          
-         
+
           <a href="mailto:secretariat.presmun@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="currentColor" className="social-icon">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
           </a>
 
-          
-          <a 
-            href="https://www.instagram.com/pumunclub/" 
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
+          <a href="https://www.instagram.com/pumunclub/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor" className="social-icon">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
             </svg>
           </a>
 
-          
-          <a 
-            href="https://x.com/pumunclub" 
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X"
-          >
+          <a href="https://x.com/pumunclub" target="_blank" rel="noopener noreferrer" aria-label="X">
             <svg viewBox="0 0 24 24" fill="currentColor" className="social-icon">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
@@ -48,7 +124,6 @@ export default function Footer() {
         </div>
       </div>
 
-      
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} President International Model United Nations. All Rights Reserved.</p>
       </div>

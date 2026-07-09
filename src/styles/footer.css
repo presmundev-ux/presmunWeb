@@ -3,7 +3,6 @@
   color: #ffffff;
   padding: 60px 20px 20px;
   font-family: 'EB Garamond', serif;
-  
 }
 
 .footer-content {
@@ -15,7 +14,6 @@
   text-align: center;
   gap: 20px;
 }
-
 
 .footer-logo {
   color: #ffffff;
@@ -40,60 +38,6 @@
   font-style: italic;
 }
 
-
-/* Sponsor / Partner logo groups */
-.logo-group {
-  width: 100%;
-  max-width: 1000px;
-}
-
-.logo-group-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-.logo-marquee {
-  width: 100%;
-  overflow: hidden;
-  padding: 10px 0;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-}
-
-.logo-track {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  width: max-content;
-  animation: scroll-logos 20s linear infinite;
-}
-
-.logo-track-reverse {
-  animation-direction: reverse;
-}
-
-.marquee-logo {
-  width: auto;
-  object-fit: contain;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.marquee-logo:hover {
-  opacity: 1;
-}
-
-@keyframes scroll-logos {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-
 .social-links {
   display: flex;
   gap: 30px;
@@ -117,7 +61,6 @@
   color: #ae2c2d;
   transform: translateY(-4px); 
 }
-
 
 .footer-bottom {
   max-width: 1000px;

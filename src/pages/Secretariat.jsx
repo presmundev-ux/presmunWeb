@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import SecretariatCard from "../components/SecretariatCard";
 import "../styles/secretariat.css";
+import LogoMarquee from "../components/LogoMarquee";
 
 export default function Secretariat() {
   
@@ -104,7 +105,7 @@ Mr. Guido Benny is a faculty member at the University of Indonesia, where he has
         />
         
       </section>
-
+      <LogoMarquee />
       <Footer />
     </>
   );

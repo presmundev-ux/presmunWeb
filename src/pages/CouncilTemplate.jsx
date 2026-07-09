@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import "../styles/about.css"; 
+import LogoMarquee from "../components/LogoMarquee";
 
 export default function CouncilTemplate({ councilName, description, subtitle }) {
   return (
@@ -24,7 +25,7 @@ export default function CouncilTemplate({ councilName, description, subtitle }) 
           
         </div>
       </section>
-
+      <LogoMarquee />
       <Footer />
     </>
   );

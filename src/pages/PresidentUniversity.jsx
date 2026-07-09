@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
+import LogoMarquee from "../components/LogoMarquee";
 
 export default function PresidentUniversity() {
   return (
@@ -62,7 +63,7 @@ export default function PresidentUniversity() {
         </div>
 
       </section>
-
+      <LogoMarquee />
       <Footer />
     </>
   );

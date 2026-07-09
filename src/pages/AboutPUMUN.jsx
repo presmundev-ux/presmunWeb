@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import "../styles/about.css";
+import LogoMarquee from "../components/LogoMarquee";
 
 export default function AboutPUMUN() {
   return (
@@ -82,7 +83,7 @@ export default function AboutPUMUN() {
           <p>As its flagship initiative, PUMUN organizes PresMUN, an annual international-level Model UN conference. Originally established as a student-led activity within PUMUN, PresMUN has grown significantly in scale, and is now officially recognized as a university-level activity at President University.</p>
         </div>
       </section>
-
+      <LogoMarquee />
       <Footer />
     </>
   );

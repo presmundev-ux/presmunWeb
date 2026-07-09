@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import "../styles/home.css";
+import LogoMarquee from "../components/LogoMarquee";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
 
 
 
-
+      <LogoMarquee />
       <Footer />
     </>
   );

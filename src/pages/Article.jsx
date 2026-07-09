@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import { articlesData } from "../data/articlesData"; 
+import LogoMarquee from "../components/LogoMarquee";
 
 export default function Article() {
   const { id } = useParams();
@@ -65,7 +66,7 @@ export default function Article() {
         </div>
         
       </section>
-
+      <LogoMarquee />
       <Footer />
     </>
   );

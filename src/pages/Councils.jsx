@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import { Link } from "react-router-dom";
 import "../styles/councils.css";
+import LogoMarquee from "../components/LogoMarquee";
 
 const councilsData = [
   { id: "UNGA", title: "UNGA", subtitle: "THIRD COMMITTEE ", img: "/images/Unemblem.svg" },
@@ -45,7 +46,7 @@ export default function Councils() {
           
         </div>
       </section>
-
+      <LogoMarquee />
       <Footer />
     </>
   );

@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import "../styles/about.css"; 
+import LogoMarquee from "../components/LogoMarquee";
 
 export default function AboutPresMUN() {
   return (
@@ -36,7 +37,7 @@ In recognition of its continued growth and impact, PresMUN is now officially rec
 
         </div>
       </section>
-
+      <LogoMarquee />
       <Footer />
     </>
   );

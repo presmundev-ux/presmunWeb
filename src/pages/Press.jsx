@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import { Link } from "react-router-dom";
-import LogoMarquee from "../components/LogoMarquee";
+
 
 import { articlesData } from "../data/articlesData"; 
 
@@ -47,7 +47,7 @@ export default function Press() {
           </Link>
         ))}
       </section>
-      <LogoMarquee />
+     
       <Footer />
     </>
   );

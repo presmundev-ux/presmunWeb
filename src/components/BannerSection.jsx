@@ -10,6 +10,7 @@ export default function BannerSection({
   backgroundImage,
   variant = "hero", 
   height = "100vh",
+  titleSize,
   style: customStyle,
   ...rest
 }) {
@@ -26,7 +27,7 @@ export default function BannerSection({
       <div className="banner-overlay"></div>
 
       <div className="banner-content">
-        <h1>{title}</h1>
+        <h1 style={titleSize ? { fontSize: titleSize } : undefined}>{title}</h1>
         {subtitle && <p className="subtitle">{subtitle}</p>}
         {date && <p className="banner-date">{date}</p>}
         

@@ -17,10 +17,11 @@ export default function Article() {
 
       
       <BannerSection
-        title={article.title} 
-        variant="solid"
-        height="40vh"
-        style={{ backgroundColor: '#320000' }} 
+       title={article.title} 
+       variant="solid"
+       height="40vh"
+       style={{ backgroundColor: '#320000' }} 
+       titleSize="40px"
       />
 
       <section className="article-content" style={{ maxWidth: '900px', margin: '60px auto', padding: '0 20px' }}>

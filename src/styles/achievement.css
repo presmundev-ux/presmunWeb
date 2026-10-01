@@ -1,7 +1,40 @@
 .achievement-page-wrapper {
   background-color: #f8fafc;
   min-height: calc(100vh - 200px);
-  padding: 50px 24px 100px;
+  padding: 60px 24px 100px;
+}
+
+.achievement-empty-container {
+  max-width: 640px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.achievement-empty-box {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  padding: 64px 36px;
+}
+
+.empty-trophy-icon {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.achievement-empty-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 12px;
+}
+
+.achievement-empty-desc {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
 }
 
 .achievement-container {

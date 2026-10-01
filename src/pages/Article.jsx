@@ -100,40 +100,6 @@ export default function Article() {
 
       <div className="article-page-wrapper">
         <div className="article-layout-container">
-          
-          <aside className="article-sidebar">
-            <div className="sidebar-sticky-inner">
-              <div className="sidebar-header-row">
-                <h3 className="sidebar-heading">Other Articles</h3>
-                <span className="sidebar-count">{otherArticles.length} stories</span>
-              </div>
-              <div className="sidebar-articles-list">
-                {otherArticles.map((item) => (
-                  <Link
-                    to={`/press/${item.id}`}
-                    key={item.id}
-                    className="sidebar-article-card"
-                  >
-                    <div className="sidebar-card-thumb">
-                      {item.image ? (
-                        <img src={item.image} alt={item.title} />
-                      ) : (
-                        <div className="sidebar-thumb-placeholder">
-                          <span>{item.channel}</span>
-                        </div>
-                      )}
-                    </div>
-                    <div className="sidebar-card-content">
-                      <span className="sidebar-card-channel">{item.channel}</span>
-                      <h4 className="sidebar-card-title">{item.title}</h4>
-                      <span className="sidebar-card-date">{item.date}</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </aside>
-
           <main className="article-main-body">
             <div className="article-top-meta">
               <div className="article-meta-left">
@@ -308,6 +274,38 @@ export default function Article() {
             </div>
           </main>
 
+          <aside className="article-sidebar">
+            <div className="sidebar-sticky-inner">
+              <div className="sidebar-header-row">
+                <h3 className="sidebar-heading">Other Articles</h3>
+                <span className="sidebar-count">{otherArticles.length} stories</span>
+              </div>
+              <div className="sidebar-articles-list">
+                {otherArticles.map((item) => (
+                  <Link
+                    to={`/press/${item.id}`}
+                    key={item.id}
+                    className="sidebar-article-card"
+                  >
+                    <div className="sidebar-card-thumb">
+                      {item.image ? (
+                        <img src={item.image} alt={item.title} />
+                      ) : (
+                        <div className="sidebar-thumb-placeholder">
+                          <span>{item.channel}</span>
+                        </div>
+                      )}
+                    </div>
+                    <div className="sidebar-card-content">
+                      <span className="sidebar-card-channel">{item.channel}</span>
+                      <h4 className="sidebar-card-title">{item.title}</h4>
+                      <span className="sidebar-card-date">{item.date}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
 

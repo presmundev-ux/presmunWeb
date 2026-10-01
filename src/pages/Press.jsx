@@ -2,52 +2,110 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BannerSection from "../components/BannerSection";
 import { Link } from "react-router-dom";
-
-
-import { articlesData } from "../data/articlesData"; 
-
+import { articlesData } from "../data/articlesData";
 import "../styles/press.css";
 
 export default function Press() {
+  const featuredArticle = articlesData[0];
+  const gridArticles = articlesData.slice(1);
+
   return (
     <>
       <Header />
-      
+
       <BannerSection
-        title="Press articles"
+        title="Press &amp; Dispatches"
+        subtitle="Official journalistic reports, dispatches, and press conferences from the 13th session"
         variant="solid"
-        height="40vh" 
-        style={{ backgroundColor: '#320000' }} 
+        height="35vh"
+        style={{ backgroundColor: "#200406" }}
+        titleSize="34px"
       />
 
-      <section className="press-feed">
-        {articlesData.map((article) => (
-          <Link to={`/press/${article.id}`} className="press-card" key={article.id}>
-            
-            {article.image ? (
-              <img 
-                src={article.image} 
-                alt={article.title} 
-                className="press-img" 
-                style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '4px' }} 
-              />
-            ) : (
-              <div className="press-img-placeholder" style={{ height: '300px', backgroundColor: '#eaeaea', borderRadius: '4px' }}></div>
-            )}
-            
-            <div className="press-card-content" style={{ padding: '15px 0', textAlign: 'left', width: '100%' }}>
-              <h2 style={{ fontSize: '20px', marginTop: '0', marginBottom: '8px', textAlign:"left"}}>
-                {article.title}
-              </h2>
-             <p style={{ color: '#666', fontSize: '14px', margin: '0' }}>
-                {article.date}
-              </p>
+      <div className="press-page-wrapper">
+        <div className="press-feed-container">
+          {featuredArticle && (
+            <div className="press-featured-card-wrapper">
+              <Link
+                to={`/press/${featuredArticle.id}`}
+                className="press-featured-card"
+              >
+                <div className="press-featured-thumb">
+                  {featuredArticle.image ? (
+                    <img
+                      src={featuredArticle.image}
+                      alt={featuredArticle.title}
+                    />
+                  ) : (
+                    <div className="press-thumb-placeholder">
+                      {featuredArticle.channel}
+                    </div>
+                  )}
+                </div>
+                <div className="press-featured-content">
+                  <div className="press-card-meta">
+                    <span className="press-channel-tag">
+                      {featuredArticle.channel}
+                    </span>
+                    <span className="press-meta-dot">&bull;</span>
+                    <span className="press-date-tag">
+                      {featuredArticle.date}
+                    </span>
+                  </div>
+                  <h2 className="press-featured-title">
+                    {featuredArticle.title}
+                  </h2>
+                  <p className="press-featured-excerpt">
+                    {featuredArticle.body}
+                  </p>
+                  <div className="press-card-footer">
+                    <span className="press-author-name">
+                      By {featuredArticle.author}
+                    </span>
+                    <span className="press-read-badge">
+                      Read Full Dispatch &rarr;
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
+          )}
 
-          </Link>
-        ))}
-      </section>
-     
+          <div className="press-grid">
+            {gridArticles.map((article) => (
+              <Link
+                to={`/press/${article.id}`}
+                className="press-grid-card"
+                key={article.id}
+              >
+                <div className="press-grid-thumb">
+                  {article.image ? (
+                    <img src={article.image} alt={article.title} />
+                  ) : (
+                    <div className="press-thumb-placeholder">
+                      {article.channel}
+                    </div>
+                  )}
+                  <span className="press-thumb-channel">{article.channel}</span>
+                </div>
+                <div className="press-grid-content">
+                  <div className="press-grid-meta">
+                    <span>{article.date}</span>
+                    <span>&bull;</span>
+                    <span>By {article.author}</span>
+                  </div>
+                  <h3 className="press-grid-title">{article.title}</h3>
+                  <p className="press-grid-excerpt">{article.body}</p>
+                  <span className="press-grid-read-more">
+                    Read Dispatch &rarr;
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </>
   );

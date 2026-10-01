@@ -14,12 +14,10 @@ export default function Press() {
       <Header />
 
       <BannerSection
-        title="Press &amp; Dispatches"
-        subtitle="Official journalistic reports, dispatches, and press conferences from the 13th session"
+        title="Press articles"
         variant="solid"
-        height="35vh"
-        style={{ backgroundColor: "#200406" }}
-        titleSize="34px"
+        height="40vh"
+        style={{ backgroundColor: "#320000" }}
       />
 
       <div className="press-page-wrapper">
@@ -63,7 +61,7 @@ export default function Press() {
                       By {featuredArticle.author}
                     </span>
                     <span className="press-read-badge">
-                      Read Full Dispatch &rarr;
+                      Read Full Article &rarr;
                     </span>
                   </div>
                 </div>
@@ -97,7 +95,7 @@ export default function Press() {
                   <h3 className="press-grid-title">{article.title}</h3>
                   <p className="press-grid-excerpt">{article.body}</p>
                   <span className="press-grid-read-more">
-                    Read Dispatch &rarr;
+                    Read Article &rarr;
                   </span>
                 </div>
               </Link>

@@ -90,12 +90,10 @@ export default function Article() {
       <Header />
 
       <BannerSection
-        title="Press &amp; Dispatches"
-        subtitle="The Thirteenth Session Official Media"
+        title="Press articles"
         variant="solid"
-        height="32vh"
-        style={{ backgroundColor: "#1c0406" }}
-        titleSize="34px"
+        height="35vh"
+        style={{ backgroundColor: "#320000" }}
       />
 
       <div className="article-page-wrapper">
@@ -229,7 +227,7 @@ export default function Article() {
             </div>
 
             <div className="article-share-strip">
-              <span className="share-strip-label">Share this dispatch:</span>
+              <span className="share-strip-label">Share this article:</span>
               <div className="share-strip-actions">
                 <button
                   type="button"

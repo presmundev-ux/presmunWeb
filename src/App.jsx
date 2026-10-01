@@ -9,19 +9,17 @@ import IPC from "./pages/IPC";
 import UNHRC from "./pages/UNHRC"; 
 import PresidentUniversity from "./pages/PresidentUniversity";
 import ScrollToTop from "./components/ScrollToTop";
-
-
+import BackToTop from "./components/BackToTop";
 
 import CouncilTemplate from "./pages/CouncilTemplate"; 
 
 import Press from "./pages/Press"; 
 import Article from "./pages/Article";
 export default function App() {
-  const dummyText = "Sed ut perspiciatis..."; 
-
   return (
     <BrowserRouter>
-    <ScrollToTop /> 
+      <ScrollToTop />
+      <BackToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/secretariat" element={<Secretariat />} />

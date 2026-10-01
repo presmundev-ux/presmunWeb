@@ -21,7 +21,7 @@ export default function Footer() {
             />
             <div className="footer-brand-text">
               <span className="footer-brand-title">PresMUN</span>
-              <span className="footer-brand-tagline">PRESIDENT UNIVERSITY MODEL UNITED NATIONS</span>
+              <span className="footer-brand-tagline">PRESIDENT INTERNATIONAL MODEL UNITED NATIONS</span>
             </div>
           </Link>
           <p className="footer-brand-desc">

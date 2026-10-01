@@ -12,8 +12,6 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        
-        {/* Left Side: Brand Logo & Title */}
         <div className="footer-brand">
           <Link to="/" onClick={scrollToTop} className="footer-logo-lockup">
             <img 
@@ -28,14 +26,12 @@ export default function Footer() {
           </Link>
         </div>
 
-        {/* Center/Right Side: Info, Address, Menu Links, Copyright, Socials */}
         <div className="footer-info">
           <h4 className="footer-inst-title">President International Model United Nations</h4>
           <p className="footer-address">
             President University, Jl. Ki Hajar Dewantara, Kota Jababeka, Cikarang, Jawa Barat 17550 - Indonesia
           </p>
 
-          {/* Menu Navigation Links */}
           <nav className="footer-nav-menu" aria-label="Footer Menu Links">
             <Link to="/" onClick={scrollToTop}>Home</Link>
             <span className="footer-nav-divider">|</span>
@@ -56,7 +52,6 @@ export default function Footer() {
             Copyright &copy; {new Date().getFullYear()} PresMUN. All Rights Reserved.
           </p>
 
-          {/* Social Media Icons */}
           <div className="footer-social-links">
             <a 
               href="mailto:secretariat.presmun@gmail.com" 
@@ -119,7 +114,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
       </div>
     </footer>
   );

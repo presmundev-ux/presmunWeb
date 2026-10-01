@@ -1,22 +1,38 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; 
 import "../styles/header.css";
 
 export default function Header() {
-  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="logo-container">
-        <img src="/images/logopresmunaslinofekfek.png" alt="PresMUN Logo" className="logo"/>
-        <div className="logo-text">
-          <span className="logo-title">PresMUN</span>
-        </div>
+        <Link to="/" onClick={closeMenu} style={{ display: "flex", alignItems: "center", textDecoration: "none", gap: "15px" }}>
+          <img src="/images/logopresmunaslinofekfek.png" alt="PresMUN Logo" className="logo"/>
+          <div className="logo-text">
+            <span className="logo-title">PresMUN</span>
+          </div>
+        </Link>
       </div>
       
       

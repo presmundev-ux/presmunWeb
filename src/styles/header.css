@@ -1,20 +1,34 @@
- .header {
-  position: absolute;
+.header {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  padding: 30px 50px; 
-  z-index: 10;
+  padding: 24px 50px; 
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: background 0.3s ease, background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
+.header.scrolled {
+  background: rgba(50, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
 
 .logo {
   height: 60px; 
   width: auto;
   object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+.header.scrolled .logo {
+  height: 48px;
 }
 
 .nav-links {
@@ -163,14 +177,22 @@
 
 @media (max-width: 900px) {
   .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  background-color: #320000; 
-  position: relative;
-  z-index: 1000;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+    background: #320000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  .header.scrolled {
+    padding: 10px 25px;
+  }
 
   .hamburger-btn {
     display: block;

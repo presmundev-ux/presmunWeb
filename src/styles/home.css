@@ -180,6 +180,9 @@
   .banner {
     height: auto !important;
     padding: 60px 20px; 
-    
+  }
+
+  .banner:first-of-type {
+    padding-top: 100px !important;
   }
 }

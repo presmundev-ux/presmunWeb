@@ -299,20 +299,14 @@
 .sidebar-sticky-inner {
   position: sticky;
   top: 96px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 18px 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  padding-right: 8px;
-  scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 transparent;
-}
-
-.sidebar-sticky-inner::-webkit-scrollbar {
-  width: 5px;
-}
-
-.sidebar-sticky-inner::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
-  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-header-row {
@@ -322,6 +316,7 @@
   padding-bottom: 12px;
   margin-bottom: 16px;
   border-bottom: 2px solid #5a0f15;
+  flex-shrink: 0;
 }
 
 .sidebar-heading {
@@ -346,6 +341,30 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow-y: auto;
+  padding-right: 6px;
+  padding-bottom: 4px;
+  flex: 1;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.sidebar-articles-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-articles-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-articles-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 4px;
+}
+
+.sidebar-articles-list::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
 }
 
 .sidebar-article-card {
@@ -353,11 +372,12 @@
   gap: 12px;
   padding: 10px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #f8fafc;
   border: 1px solid #e2e8f0;
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .sidebar-article-card:hover {
@@ -754,6 +774,12 @@
 
   .sidebar-sticky-inner {
     position: static;
+    max-height: none;
+    overflow-y: visible;
+    padding: 20px 16px;
+  }
+
+  .sidebar-articles-list {
     max-height: none;
     overflow-y: visible;
   }

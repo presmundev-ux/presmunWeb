@@ -33,12 +33,23 @@ export default function Press() {
                     <img
                       src={featuredArticle.image}
                       alt={featuredArticle.title}
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                        const placeholder = e.target.parentElement.querySelector(
+                          ".press-thumb-placeholder"
+                        );
+                        if (placeholder) {
+                          placeholder.style.display = "flex";
+                        }
+                      }}
                     />
-                  ) : (
-                    <div className="press-thumb-placeholder">
-                      {featuredArticle.channel}
-                    </div>
-                  )}
+                  ) : null}
+                  <div
+                    className="press-thumb-placeholder"
+                    style={{ display: featuredArticle.image ? "none" : "flex" }}
+                  >
+                    {featuredArticle.channel}
+                  </div>
                 </div>
                 <div className="press-featured-content">
                   <div className="press-card-meta">
@@ -78,12 +89,26 @@ export default function Press() {
               >
                 <div className="press-grid-thumb">
                   {article.image ? (
-                    <img src={article.image} alt={article.title} />
-                  ) : (
-                    <div className="press-thumb-placeholder">
-                      {article.channel}
-                    </div>
-                  )}
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                        const placeholder = e.target.parentElement.querySelector(
+                          ".press-thumb-placeholder"
+                        );
+                        if (placeholder) {
+                          placeholder.style.display = "flex";
+                        }
+                      }}
+                    />
+                  ) : null}
+                  <div
+                    className="press-thumb-placeholder"
+                    style={{ display: article.image ? "none" : "flex" }}
+                  >
+                    {article.channel}
+                  </div>
                   <span className="press-thumb-channel">{article.channel}</span>
                 </div>
                 <div className="press-grid-content">

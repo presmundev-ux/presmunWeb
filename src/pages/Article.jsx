@@ -210,6 +210,12 @@ export default function Article() {
                     src={article.image}
                     alt={article.title}
                     className="article-img-display"
+                    onError={(e) => {
+                      const fig = e.target.closest("figure");
+                      if (fig) {
+                        fig.style.display = "none";
+                      }
+                    }}
                   />
                 </div>
                 {article.imageCaption && (
@@ -287,12 +293,26 @@ export default function Article() {
                   >
                     <div className="sidebar-card-thumb">
                       {item.image ? (
-                        <img src={item.image} alt={item.title} />
-                      ) : (
-                        <div className="sidebar-thumb-placeholder">
-                          <span>{item.channel}</span>
-                        </div>
-                      )}
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          onError={(e) => {
+                            e.target.style.display = "none";
+                            const placeholder = e.target.parentElement.querySelector(
+                              ".sidebar-thumb-placeholder"
+                            );
+                            if (placeholder) {
+                              placeholder.style.display = "flex";
+                            }
+                          }}
+                        />
+                      ) : null}
+                      <div
+                        className="sidebar-thumb-placeholder"
+                        style={{ display: item.image ? "none" : "flex" }}
+                      >
+                        <span>{item.channel}</span>
+                      </div>
                     </div>
                     <div className="sidebar-card-content">
                       <span className="sidebar-card-channel">{item.channel}</span>

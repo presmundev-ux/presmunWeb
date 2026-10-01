@@ -1,73 +1,180 @@
 .footer {
-  background-color: #111; 
+  background-color: #000000;
   color: #ffffff;
-  padding: 60px 20px 20px;
-  font-family: 'EB Garamond', serif;
+  padding: 55px 40px 45px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-content {
-  max-width: 1000px;
+.footer-container {
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 70px;
 }
 
-.footer-logo {
-  color: #ffffff;
-  line-height: 1.1;
+/* Left Brand Lockup (Logo + Title) */
+.footer-brand {
+  flex-shrink: 0;
 }
 
-.footer-logo .logo-title {
-  font-size: 32px;
-  font-weight: 700;
-  display: block;
-}
-
-.footer-logo .logo-year {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 2px;
-}
-
-.footer-text {
-  font-size: 20px;
-  color: #cccccc;
-  font-style: italic;
-}
-
-.social-links {
+.footer-logo-lockup {
   display: flex;
-  gap: 30px;
-  margin-top: 15px;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: opacity 0.25s ease;
 }
 
-.social-links a {
-  color: #ffffff; 
-  transition: color 0.3s ease, transform 0.3s ease;
+.footer-logo-lockup:hover {
+  opacity: 0.9;
+}
+
+.footer-brand-logo {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-brand-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.footer-brand-year {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #c98e3b;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Right / Main Info Column */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 8px;
+  flex: 1;
+}
+
+.footer-inst-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.footer-address {
+  font-size: 13.5px;
+  color: #b3b3b3;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 650px;
+}
+
+/* Navigation Links within Footer */
+.footer-nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.footer-nav-menu a {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-menu a:hover {
+  color: #c98e3b;
+  text-decoration: underline;
+}
+
+.footer-nav-divider {
+  color: #555555;
+  font-size: 12px;
+  user-select: none;
+}
+
+.footer-copyright {
+  font-size: 13px;
+  color: #737373;
+  margin: 0;
+}
+
+/* Social Media Icons Row */
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.footer-social-links a {
+  color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
-.social-icon {
-  width: 30px;
-  height: 30px;
+.footer-social-links .social-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.social-links a:hover {
-  color: #ae2c2d;
-  transform: translateY(-4px); 
+.footer-social-links a:hover {
+  color: #c98e3b;
+  transform: translateY(-2px);
 }
 
-.footer-bottom {
-  max-width: 1000px;
-  margin: 50px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
-  font-size: 16px;
-  color: #888;
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 860px) {
+  .footer {
+    padding: 40px 24px 35px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .footer-brand-logo {
+    height: 52px;
+  }
+
+  .footer-brand-title {
+    font-size: 28px;
+  }
+
+  .footer-inst-title {
+    font-size: 18px;
+  }
+
+  .footer-nav-menu {
+    gap: 8px;
+  }
 }

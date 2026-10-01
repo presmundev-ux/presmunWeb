@@ -48,6 +48,7 @@ export default function Header() {
           <Link to="/committees" onClick={closeMenu}>Committees</Link>
           <Link to="/secretariat" onClick={closeMenu}>The Secretariat</Link>
           <Link to="/press" onClick={closeMenu}>Press articles</Link>
+          <Link to="/achievement" onClick={closeMenu}>Achievement</Link>
           <Link to="/president-university" className="nav-link" onClick={closeMenu}>President University</Link>
 
           <div className="mobile-cta-wrapper">

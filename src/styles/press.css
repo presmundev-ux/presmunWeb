@@ -283,11 +283,11 @@
 }
 
 .article-layout-container {
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 44px;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+  gap: 36px;
   align-items: start;
 }
 

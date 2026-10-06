@@ -16,6 +16,7 @@ import CouncilTemplate from "./pages/CouncilTemplate";
 import Press from "./pages/Press"; 
 import Article from "./pages/Article";
 import Achievement from "./pages/Achievement";
+import PressRelease from "./pages/PressRelease";
 export default function App() {
   return (
     <BrowserRouter>
@@ -35,6 +36,8 @@ export default function App() {
 
         <Route path="/press" element={<Press />} /> 
         <Route path="/press/:id" element={<Article />} />
+        <Route path="/press-release" element={<PressRelease />} />
+        <Route path="/press-releases" element={<PressRelease />} />
         <Route path="/achievement" element={<Achievement />} />
         <Route path="/achievements" element={<Achievement />} />
         <Route path="/president-university" element={<PresidentUniversity />} />

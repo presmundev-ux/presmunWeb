@@ -1,10 +1,23 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; 
+import { Link, useLocation } from "react-router-dom"; 
 import "../styles/header.css";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const isHome = pathname === "/";
+  const isAbout = pathname.startsWith("/about");
+  const isAboutPumun = pathname === "/about-pumun";
+  const isAboutPresmun = pathname === "/about-presmun";
+  const isCommittees = pathname.startsWith("/committees");
+  const isSecretariat = pathname === "/secretariat";
+  const isPress = (pathname === "/press" || pathname.startsWith("/press/")) && !pathname.startsWith("/press-release");
+  const isPressRelease = pathname === "/press-release" || pathname === "/press-releases";
+  const isAchievement = pathname === "/achievement" || pathname === "/achievements";
+  const isPU = pathname === "/president-university";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,22 +48,22 @@ export default function Header() {
         </Link>
 
         <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/" onClick={closeMenu} className={isHome ? "active" : ""}>Home</Link>
           
-          <div className="dropdown">
+          <div className={`dropdown ${isAbout ? "active" : ""}`}>
             <span className="dropbtn">About</span>
             <div className="dropdown-content">
-              <Link to="/about-pumun" onClick={closeMenu}>About PUMUN</Link>
-              <Link to="/about-presmun" onClick={closeMenu}>About PresMUN</Link>
+              <Link to="/about-pumun" onClick={closeMenu} className={isAboutPumun ? "active" : ""}>About PUMUN</Link>
+              <Link to="/about-presmun" onClick={closeMenu} className={isAboutPresmun ? "active" : ""}>About PresMUN</Link>
             </div>
           </div>
 
-          <Link to="/committees" onClick={closeMenu}>Committees</Link>
-          <Link to="/secretariat" onClick={closeMenu}>The Secretariat</Link>
-          <Link to="/press" onClick={closeMenu}>Press articles</Link>
-          <Link to="/press-release" onClick={closeMenu}>Press Release</Link>
-          <Link to="/achievement" onClick={closeMenu}>Achievement</Link>
-          <Link to="/president-university" className="nav-link" onClick={closeMenu}>President University</Link>
+          <Link to="/committees" onClick={closeMenu} className={isCommittees ? "active" : ""}>Committees</Link>
+          <Link to="/secretariat" onClick={closeMenu} className={isSecretariat ? "active" : ""}>The Secretariat</Link>
+          <Link to="/press" onClick={closeMenu} className={isPress ? "active" : ""}>Press articles</Link>
+          <Link to="/press-release" onClick={closeMenu} className={isPressRelease ? "active" : ""}>Press Release</Link>
+          <Link to="/achievement" onClick={closeMenu} className={isAchievement ? "active" : ""}>Achievement</Link>
+          <Link to="/president-university" className={`nav-link ${isPU ? "active" : ""}`} onClick={closeMenu}>President University</Link>
 
           <div className="mobile-cta-wrapper">
             <a 

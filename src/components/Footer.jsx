@@ -39,7 +39,6 @@ export default function Footer() {
             <li><Link to="/secretariat" onClick={scrollToTop}>The Secretariat</Link></li>
             <li><Link to="/press" onClick={scrollToTop}>Press Articles</Link></li>
             <li><Link to="/press-release" onClick={scrollToTop}>Press Release</Link></li>
-            <li><Link to="/achievement" onClick={scrollToTop}>Achievement</Link></li>
             <li><Link to="/president-university" onClick={scrollToTop}>President University</Link></li>
           </ul>
         </div>

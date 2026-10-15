@@ -16,7 +16,6 @@ export default function Header() {
   const isSecretariat = pathname === "/secretariat";
   const isPress = (pathname === "/press" || pathname.startsWith("/press/")) && !pathname.startsWith("/press-release");
   const isPressRelease = pathname === "/press-release" || pathname === "/press-releases";
-  const isAchievement = pathname === "/achievement" || pathname === "/achievements";
   const isPU = pathname === "/president-university";
 
   useEffect(() => {
@@ -73,7 +72,6 @@ export default function Header() {
           <Link to="/secretariat" onClick={closeMenu} className={isSecretariat ? "active" : ""}>The Secretariat</Link>
           <Link to="/press" onClick={closeMenu} className={isPress ? "active" : ""}>Press articles</Link>
           <Link to="/press-release" onClick={closeMenu} className={isPressRelease ? "active" : ""}>Press Release</Link>
-          <Link to="/achievement" onClick={closeMenu} className={isAchievement ? "active" : ""}>Achievement</Link>
           <Link to="/president-university" className={`nav-link ${isPU ? "active" : ""}`} onClick={closeMenu}>President University</Link>
 
           <div className="mobile-cta-wrapper">

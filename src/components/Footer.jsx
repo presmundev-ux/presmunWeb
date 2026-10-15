@@ -33,7 +33,6 @@ export default function Footer() {
           <h4 className="footer-heading">NAVIGATION</h4>
           <ul className="footer-links-list">
             <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
-            <li><Link to="/about-pumun" onClick={scrollToTop}>About PUMUN</Link></li>
             <li><Link to="/about-presmun" onClick={scrollToTop}>About PresMUN</Link></li>
             <li><Link to="/committees" onClick={scrollToTop}>Committees</Link></li>
             <li><Link to="/secretariat" onClick={scrollToTop}>The Secretariat</Link></li>

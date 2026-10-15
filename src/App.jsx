@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Secretariat from "./pages/Secretariat";
-import AboutPUMUN from "./pages/AboutPUMUN";
 import AboutPresMUN from "./pages/AboutPresMUN";
 import Committees from "./pages/Councils";
 import UNGA from "./pages/UNGA"; 
@@ -24,8 +23,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/secretariat" element={<Secretariat />} />
-        <Route path="/about-pumun" element={<AboutPUMUN />} /> 
+        <Route path="/about" element={<AboutPresMUN />} /> 
         <Route path="/about-presmun" element={<AboutPresMUN />} /> 
+        <Route path="/about-pumun" element={<AboutPresMUN />} /> 
         
         <Route path="/committees" element={<Committees />} />
         <Route path="/committees/UNGA" element={<UNGA />} />

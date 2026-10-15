@@ -34,7 +34,7 @@ export default function Home() {
 <BannerSection
         title="About us"
         buttonText="LEARN MORE"
-        buttonLink="/about-pumun" 
+        buttonLink="/about-presmun" 
         backgroundImage="/images/PUpict.jpeg"
         variant="light" 
         height="820px"

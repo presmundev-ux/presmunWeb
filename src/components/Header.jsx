@@ -10,8 +10,6 @@ export default function Header() {
 
   const isHome = pathname === "/";
   const isAbout = pathname.startsWith("/about");
-  const isAboutPumun = pathname === "/about-pumun";
-  const isAboutPresmun = pathname === "/about-presmun";
   const isCommittees = pathname.startsWith("/committees");
   const isSecretariat = pathname === "/secretariat";
   const isPress = (pathname === "/press" || pathname.startsWith("/press/")) && !pathname.startsWith("/press-release");
@@ -59,14 +57,7 @@ export default function Header() {
 
         <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
           <Link to="/" onClick={closeMenu} className={isHome ? "active" : ""}>Home</Link>
-          
-          <div className={`dropdown ${isAbout ? "active" : ""}`}>
-            <span className="dropbtn">About</span>
-            <div className="dropdown-content">
-              <Link to="/about-pumun" onClick={closeMenu} className={isAboutPumun ? "active" : ""}>About PUMUN</Link>
-              <Link to="/about-presmun" onClick={closeMenu} className={isAboutPresmun ? "active" : ""}>About PresMUN</Link>
-            </div>
-          </div>
+          <Link to="/about-presmun" onClick={closeMenu} className={isAbout ? "active" : ""}>About PresMUN</Link>
 
           <Link to="/committees" onClick={closeMenu} className={isCommittees ? "active" : ""}>Committees</Link>
           <Link to="/secretariat" onClick={closeMenu} className={isSecretariat ? "active" : ""}>The Secretariat</Link>

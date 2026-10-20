@@ -103,27 +103,3 @@ export const photoReleasesData = [
     resolution: "High Resolution (300 DPI)"
   }
 ];
-
-export const mediaAssetsData = [
-  {
-    id: "asset-1",
-    title: "Official PresMUN Logo Package",
-    type: "Vector / PNG / SVG",
-    size: "4.2 MB",
-    description: "High-resolution circular logo, transparent emblem, and horizontal lockups for editorial and broadcast media use."
-  },
-  {
-    id: "asset-2",
-    title: "PresMUN 2026 Official Media Factsheet",
-    type: "PDF Document",
-    size: "1.8 MB",
-    description: "Key conference statistics, council topic backgrounds, leadership bios, and diplomatic timeline overview."
-  },
-  {
-    id: "asset-3",
-    title: "Media Accreditation Guidelines & Policy",
-    type: "PDF Document",
-    size: "850 KB",
-    description: "Guidelines for press coverage, photojournalism permissions, interview booking protocols, and publication standards."
-  }
-];

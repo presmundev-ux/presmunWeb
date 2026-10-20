@@ -431,95 +431,6 @@
   text-decoration: underline;
 }
 
-.pr-assets-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 24px;
-  margin-bottom: 60px;
-}
-
-.pr-asset-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.pr-asset-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.07);
-}
-
-.pr-asset-top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 14px;
-}
-
-.pr-asset-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  background: #fdf2f2;
-  color: #5a0f15;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.pr-asset-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.pr-asset-title {
-  font-size: 16px;
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0 0 2px;
-}
-
-.pr-asset-sub {
-  font-size: 12px;
-  color: #64748b;
-  font-weight: 500;
-}
-
-.pr-asset-desc {
-  font-size: 13px;
-  color: #475569;
-  line-height: 1.55;
-  margin: 0 0 18px;
-}
-
-.pr-asset-download-btn {
-  margin-top: auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 9px 16px;
-  border-radius: 6px;
-  background: #f8fafc;
-  border: 1px solid #cbd5e1;
-  color: #334155;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.pr-asset-download-btn:hover {
-  background: #5a0f15;
-  border-color: #5a0f15;
-  color: #ffffff;
-}
 
 .pr-contact-card {
   background: linear-gradient(135deg, #200406 0%, #4a0d12 100%);
@@ -617,8 +528,7 @@
   }
 
   .pr-releases-grid,
-  .pr-photo-grid,
-  .pr-assets-grid {
+  .pr-photo-grid {
     grid-template-columns: 1fr;
   }
 

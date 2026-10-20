@@ -5,7 +5,6 @@ import BannerSection from "../components/BannerSection";
 import {
   pressReleasesData,
   photoReleasesData,
-  mediaAssetsData,
 } from "../data/pressReleasesData";
 import "../styles/pressRelease.css";
 
@@ -40,7 +39,7 @@ export default function PressRelease() {
           <div className="pr-hub-header">
             <h2 className="pr-hub-title">PresMUN Press &amp; Media Centre</h2>
             <p className="pr-hub-desc">
-              The official repository for PresMUN press releases, conference communiqués, event photo reports, high-resolution media assets, and press office contacts.
+              The official repository for PresMUN press releases, conference communiqués, event photo reports, and press office contacts.
             </p>
           </div>
 
@@ -72,13 +71,6 @@ export default function PressRelease() {
               onClick={() => setActiveTab("photos")}
             >
               Photo Releases
-            </button>
-            <button
-              type="button"
-              className={`pr-tab-btn ${activeTab === "assets" ? "active" : ""}`}
-              onClick={() => setActiveTab("assets")}
-            >
-              Media Assets &amp; Kit
             </button>
           </div>
 
@@ -202,46 +194,6 @@ export default function PressRelease() {
                         </a>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-
-          {(activeTab === "all" || activeTab === "assets") && (
-            <section className="pr-assets-section">
-              <div className="pr-section-heading-row">
-                <h3 className="pr-section-title">Media Assets &amp; Brand Resources</h3>
-                <span className="pr-section-subtitle">Official Press Downloads</span>
-              </div>
-              <div className="pr-assets-grid">
-                {mediaAssetsData.map((asset) => (
-                  <div className="pr-asset-card" key={asset.id}>
-                    <div className="pr-asset-top">
-                      <div className="pr-asset-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                          <polyline points="7 10 12 15 17 10" />
-                          <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                      </div>
-                      <div className="pr-asset-info">
-                        <h4 className="pr-asset-title">{asset.title}</h4>
-                        <span className="pr-asset-sub">{asset.type} &bull; {asset.size}</span>
-                      </div>
-                    </div>
-                    <p className="pr-asset-desc">{asset.description}</p>
-                    <a
-                      href="mailto:secretariat.presmun@gmail.com?subject=Media%20Asset%20Request"
-                      className="pr-asset-download-btn"
-                    >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                        <polyline points="7 10 12 15 17 10" />
-                        <line x1="12" y1="15" x2="12" y2="3" />
-                      </svg>
-                      <span>Request Media Pack</span>
-                    </a>
                   </div>
                 ))}
               </div>
